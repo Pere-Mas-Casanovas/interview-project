@@ -1,0 +1,19 @@
+server:
+  port: 3026
+  servlet:
+    context-path: /req10079266
+  tomcat:
+    redirect-context-root: false
+
+app:
+  config:
+    input-date-format: "yyyy-MM-dd"
+    daily-summary-schedule: "0 0 0 1 * *"
+    input-formats:
+      plain-csv:
+        date-time: d/M/yyyy H:mm
+
+spring:
+  application: IncidentSummaryService
+  profiles:
+    active: local-dev
